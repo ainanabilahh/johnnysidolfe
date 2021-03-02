@@ -37,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisSpacing: 10,
                   crossAxisCount: 2,
                   children: < Widget > [
+                  for(var i = 0; i< model.group.length; i++)
                     Container(
                       alignment: Alignment.topCenter,
                       decoration: BoxDecoration(
@@ -44,11 +45,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: GestureDetector(
                         child: Column(children: < Widget > [
-                          Image(image: AssetImage("images/kinpuri.jpg")),
+                          Image(image: AssetImage(model.group[i].url)),
                           Container(
                             margin: const EdgeInsets.only(top: 25.0),
                               child: Text(
-                                'King & Prince',
+                                model.group[i].name,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),
                               )
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                         ]),
                         onTap: () {
                           Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => DetailScreen("images/kinpuri.jpg"),
+                            builder: (context) => DetailScreen(model.group[i].url),
                           ));
                         },
                       ),

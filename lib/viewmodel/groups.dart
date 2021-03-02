@@ -14,9 +14,11 @@ class IdolModel extends BaseViewModel {
       final response = await http.get('http://192.168.1.101/johnnysidolbe/public/groups');
 
       List<dynamic> groupJson = idolFromJson(response.body);
+      print(idolFromJson(response.body));
+      print(groupJson);
       for (dynamic json in groupJson) {
         print('Json: $json');
-        group.add(Idol.fromJson(json));
+        group.add(json);
       }
       setBusy(false);
       notifyListeners();
