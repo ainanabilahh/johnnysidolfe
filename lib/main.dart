@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/home.dart';
-import 'package:flutter_application_2/viewmodel/groups.dart';
+import 'package:johnnysidolfe/home.dart';
+import 'package:johnnysidolfe/viewmodel/groups.dart';
 
 void main() {
   runApp(MyApp());

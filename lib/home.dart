@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_2/groups.dart';
+// import 'package:johnnysidolfe/groups.dart';
 import 'package:stacked/stacked.dart';
-import 'package:flutter_application_2/viewmodel/groups.dart';
+import 'package:johnnysidolfe/viewmodel/groups.dart';
 
 class HomeScreen extends StatelessWidget {
   final IdolModel model;
